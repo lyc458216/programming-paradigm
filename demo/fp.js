@@ -6,7 +6,7 @@ const sum = reduce(add, 0);
 const filter = fn => array => array.filter(fn);
 
 const average = items => (
-    item.length === 0
+    items.length === 0
     ? 0
     : sum(items) / items.length
 );

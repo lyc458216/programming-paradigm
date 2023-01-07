@@ -5,9 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "调试循环引用",
+            "program": "${workspaceFolder}/packages/modules-cycles/main.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "type": "node",
             "request": "launch",
-            "name": "启动程序",
+            "name": "调试pm2",
             "skipFiles": [
                 "<node_internals>/**"
             ],

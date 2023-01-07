@@ -7,6 +7,8 @@ app.use(ctx => {
     if (ctx.path === '/good') {
         return ctx.body = 'good'
     }
+    // 在 fs.readFile 的回调函数里加入 try/catch 异常处理后，当读取文件遇到异常时，就会直接抛出，
+    // 而抛出的异常会被 try/catch 捕获，当前线程就不会因异常而意外结束了。
     fs.readFile('somefile.txt', function(err, data){
         try {
             console.log(`programe go try`)
